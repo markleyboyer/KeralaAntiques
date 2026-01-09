@@ -1,0 +1,246 @@
+:root {
+    --primary-gold: #c5a059;
+    --secondary-gold: #8e6d2f;
+    --dark-wood: #1a120b;
+    --aged-paper: #f4ecd8;
+    --text-color: #f4ecd8;
+    --accent-color: #d4af37;
+    --glass-bg: rgba(26, 18, 11, 0.75);
+    --glass-border: rgba(197, 160, 89, 0.3);
+    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: var(--dark-wood);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('StoreBG.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    max-height: 850px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    margin: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.input-section,
+.display-section,
+.settings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--primary-gold);
+    opacity: 0.8;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 1rem;
+    color: var(--aged-paper);
+    font-size: 1.25rem;
+    outline: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+input:focus {
+    border-color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
+}
+
+/* Code Input specific */
+#code-input {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.keyboard-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+}
+
+.key {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 0.75rem 0.25rem;
+    color: var(--aged-paper);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.key:active {
+    background: var(--accent-color);
+    color: var(--dark-wood);
+    transform: scale(0.95);
+}
+
+.key.backspace {
+    grid-column: span 1;
+    background: rgba(255, 75, 75, 0.1);
+    border-color: rgba(255, 75, 75, 0.3);
+}
+
+.key.backspace:active {
+    background: #ff4b4b;
+    color: white;
+}
+
+.display-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    border-left: 3px solid var(--accent-color);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.display-card:active {
+    transform: scale(0.98);
+}
+
+.value {
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--accent-color);
+    margin-top: 0.25rem;
+}
+
+.currency {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    opacity: 0.6;
+}
+
+.settings-section {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.exchange-rate-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#exchange-rate {
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 0.6rem;
+    opacity: 0.4;
+    margin-top: 0.5rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: fadeInUp 0.6s ease out forwards;
+}
+
+/* Mobile optimizations */
+@media (max-height: 700px) {
+    .app-container {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .display-card {
+        padding: 1rem;
+    }
+
+    .value {
+        font-size: 1.5rem;
+    }
+}

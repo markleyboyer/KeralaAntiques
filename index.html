@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Kerala Antiques | Price Translator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Converter</h1>
+            <div class="divider"></div>
+        </header>
+
+        <section class="input-section">
+            <label for="code-input">Price Code</label>
+            <div class="input-wrapper">
+                <input type="text" id="code-input" placeholder="Type or use keys" autocomplete="off" spellcheck="false">
+            </div>
+
+            <div class="keyboard-grid">
+                <button class="key" data-key="B">B</button>
+                <button class="key" data-key="L">L</button>
+                <button class="key" data-key="A">A</button>
+                <button class="key" data-key="C">C</button>
+                <button class="key" data-key="K">K</button>
+                <button class="key" data-key="S">S</button>
+                <button class="key" data-key="T">T</button>
+                <button class="key" data-key="O">O</button>
+                <button class="key" data-key="N">N</button>
+                <button class="key" data-key="E">E</button>
+                <button class="key backspace" id="backspace-key">⌫</button>
+            </div>
+        </section>
+
+        <section class="display-section">
+            <div class="display-card" id="inr-display">
+                <label>Indian Rupees</label>
+                <div class="value">₹ <span id="inr-value">0</span></div>
+            </div>
+
+            <div class="display-card" id="usd-display">
+                <label>US Dollars</label>
+                <div class="value">$ <span id="usd-value">0.00</span></div>
+            </div>
+        </section>
+
+        <section class="settings-section">
+            <label for="exchange-rate">Exchange Rate (1 USD to INR)</label>
+            <div class="exchange-rate-group">
+                <input type="number" id="exchange-rate" step="0.01" value="83.30">
+            </div>
+        </section>
+
+        <footer class="footer-text">
+            B=1 L=2 A=3 C=4 K=5 S=6 T=7 O=8 N=9 E=0
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
