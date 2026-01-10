@@ -56,9 +56,9 @@ function formatCurrency(value, currency = 'INR') {
         return new Intl.NumberFormat('en-IN').format(value);
     } else {
         return new Intl.NumberFormat('en-US', {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        }).format(value);
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        }).format(Math.round(value));
     }
 }
 
