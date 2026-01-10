@@ -5,7 +5,7 @@
     --aged-paper: #f4ecd8;
     --text-color: #f4ecd8;
     --accent-color: #d4af37;
-    --glass-bg: rgba(26, 18, 11, 0.6);
+    --glass-bg: rgba(26, 18, 11, 0.35);
     --glass-border: rgba(197, 160, 89, 0.3);
     --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
 }
@@ -25,16 +25,16 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('StoreBG.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('StoreBG.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .app-container {
-    width: 100%;
-    max-width: 400px;
-    height: 100vh;
-    max-height: 850px;
+    width: 92%;
+    max-width: 380px;
+    height: 94vh;
+    max-height: 800px;
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -162,7 +162,7 @@ input:focus {
 }
 
 .display-card {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.15);
     border-radius: 16px;
     padding: 1.5rem;
     text-align: center;
